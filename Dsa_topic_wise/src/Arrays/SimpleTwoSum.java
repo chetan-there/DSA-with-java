@@ -1,0 +1,19 @@
+package Arrays;
+public class SimpleTwoSum {
+    public static void main(String[] args) {
+        int[] arr = {2,0, 7, 11, 15};
+        int target = 9;
+
+        // Check every pair
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] + arr[j] == target) {
+                    System.out.println("Indices: " + i + ", " + j);
+                    return; // Exit after finding the first pair
+                }
+            }
+        }
+
+        System.out.println("No two elements add up to the target.");
+    }
+}
